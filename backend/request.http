@@ -1,0 +1,33 @@
+POST https://mainnet.infura.io/v3/0d9faf479560409592855a4f13935e53
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "eth_getBlockByNumber",
+  "params": ["latest",false],
+  "id": 1
+}
+
+### transaction
+POST https://mainnet.infura.io/v3/0d9faf479560409592855a4f13935e53
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "eth_getTransactionByHash",
+  "params": ["0x165c2bc17e0074ef2a9d359f018168dada0df3b57194d98e342f9f6ec6de1434"],
+  "id": 1
+}
+
+
+### sort size
+GET http://localhost:3232/blocks?page=2&limit=20&sortBy=size&sortDirection=ASC
+
+### sort by timestamp
+GET http://localhost:3232/blocks?page=1&limit=10&sortBy=timestamp&sortDirection=DESC
+
+### delete by hash
+DELETE http://localhost:3232/blocks/hash/0xd093f93766563e85ef752bbeaee46a5921341284a153db1320f92bf167794bff
+
+### get transactions
+GET http://localhost:3232/transactions/block/1
